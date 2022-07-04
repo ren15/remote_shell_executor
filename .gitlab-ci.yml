@@ -8,6 +8,4 @@ build:
     - cat /etc/*release
     - lscpu
     - free -h
-    - cd remote_shell_executor
-    - cargo b 
-    - cargo t 
+    - bash scripts/run_test.sh
