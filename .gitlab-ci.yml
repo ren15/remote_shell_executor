@@ -1,10 +1,11 @@
 build:       
-  image: rust:1.62-slim-buster
+  image: rust:1.62-buster
   stage: build
   timeout: 30 minutes
   tags:
     - gfw_free
   script:
+    - apt update && apt install -y curl 
     - cat /etc/*release
     - lscpu
     - bash scripts/run_test.sh
