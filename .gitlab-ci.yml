@@ -1,0 +1,13 @@
+build:       
+  image: rust:1.62-slim-buster
+  stage: build
+  timeout: 30 minutes
+  tags:
+    - gfw_free
+  script:
+    - cat /etc/*release
+    - lscpu
+    - free -h
+    - cd remote_shell_executor
+    - cargo b 
+    - cargo t 
