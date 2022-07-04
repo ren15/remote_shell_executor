@@ -8,4 +8,5 @@ build:
     - apt update && apt install -y curl 
     - cat /etc/*release
     - lscpu
+    - cd remote_shell_executor && cargo b && cargo clippy
     - bash scripts/run_test.sh
