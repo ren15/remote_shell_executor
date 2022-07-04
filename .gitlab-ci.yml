@@ -7,5 +7,4 @@ build:
   script:
     - cat /etc/*release
     - lscpu
-    - free -h
     - bash scripts/run_test.sh
