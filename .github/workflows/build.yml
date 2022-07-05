@@ -23,6 +23,7 @@ jobs:
       - name: Build
         shell: bash
         run: |
+          cd remote_shell_executor
           cargo b
           cargo clippy
 
