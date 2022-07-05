@@ -25,7 +25,6 @@ jobs:
         run: |
           cd remote_shell_executor
           cargo b
-          cargo clippy
 
       - name: Test
         shell: bash
