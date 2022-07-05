@@ -15,8 +15,10 @@ jobs:
 
       - name: Prepare system
         run: |
+          apt-get update && apt-get install -y curl procps 
           lscpu
-          apt update && apt install -y curl 
+          free -h
+          df -h
 
       - name: Test
         shell: bash
