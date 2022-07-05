@@ -1,0 +1,24 @@
+name: ci
+
+on: push
+
+env:
+  DEBIAN_FRONTEND: noninteractive
+
+jobs:
+  run:
+    runs-on: ubuntu-20.04
+    container:
+      image: rust:1.62-buster
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Prepare system
+        run: |
+          lscpu
+          apt update && apt install -y curl 
+
+      - name: Test
+        shell: bash
+        run: |
+          bash scripts/run_test.sh
