@@ -26,6 +26,12 @@ jobs:
           cd remote_shell_executor
           cargo b
 
+      - name: Build Release
+        shell: bash
+        run: |
+          cd remote_shell_executor
+          cargo b --release
+
       - name: Test
         shell: bash
         run: |
