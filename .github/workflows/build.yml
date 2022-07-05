@@ -20,6 +20,12 @@ jobs:
           free -h
           df -h
 
+      - name: Build
+        shell: bash
+        run: |
+          cargo b
+          cargo clippy
+
       - name: Test
         shell: bash
         run: |
