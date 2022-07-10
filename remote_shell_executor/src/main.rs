@@ -2,6 +2,7 @@ use actix_web::{error, get, post, web, App, Error, HttpResponse, HttpServer, Res
 
 #[get("/hello/{name}")]
 async fn greet(name: web::Path<String>) -> impl Responder {
+    println!("Hello {name}!");
     format!("Hello {name}!")
 }
 
